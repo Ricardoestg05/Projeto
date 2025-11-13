@@ -36,14 +36,35 @@
             echo \hail812\adminlte\widgets\Menu::widget([
                 'items' => [
                     [
-                        'label' => 'Starter Pages',
-                        'icon' => 'tachometer-alt',
-                        'badge' => '<span class="right badge badge-info">2</span>',
-                        'items' => [
-                            ['label' => 'Active Page', 'url' => ['site/index'], 'iconStyle' => 'far'],
-                            ['label' => 'Inactive Page', 'iconStyle' => 'far'],
-                        ]
+                        'label' => 'Home',
+                        'icon' => 'house-user',
+                        'url' => \yii\helpers\Url::home(),
                     ],
+                    [
+                        'label' => 'Planos de treino',
+                        'icon' => 'dumbbell'
+                    ],
+                    [
+                        'label' => 'Planos alimentares',
+                        'icon' => 'apple-alt'
+                    ],
+                    [
+                        'label' => 'Aulas de grupo',
+                        'icon' => 'running'
+                    ],
+                    [
+                        'label' => 'Avaliações físicas',
+                        'icon' => 'heartbeat'
+                    ],
+                    [
+                        'label' => 'Utilizadores',
+                        'icon' => 'users',
+                        'items' => [
+                            ['label' => 'Todos os utilizadores', 'iconStyle' => 'far', 'icon' => 'circle'],
+                            ['label' => 'Clientes associados', 'iconStyle' => 'far', 'icon' => 'circle'],
+                        ],
+                    ],
+                    /*
                     ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
@@ -72,6 +93,7 @@
                     ['label' => 'Important', 'iconStyle' => 'far', 'iconClassAdded' => 'text-danger'],
                     ['label' => 'Warning', 'iconClass' => 'nav-icon far fa-circle text-warning'],
                     ['label' => 'Informational', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info'],
+                    */
                 ],
             ]);
             ?>
