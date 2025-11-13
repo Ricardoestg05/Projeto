@@ -1,7 +1,9 @@
 <?php
 $this->title = 'Home';
 $this->params['breadcrumbs'] = [['label' => $this->title]];
+use yii\helpers\Url;
 ?>
+
 <div class="container-fluid">
     <!--
     <div class="row">
@@ -100,28 +102,31 @@ $this->params['breadcrumbs'] = [['label' => $this->title]];
     -->
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <?= \hail812\adminlte\widgets\SmallBox::widget([
+            <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
                 'title' => '1500',
                 'text' => 'Sócios Ativos',
                 'icon' => 'fas fa-users',
+                'boxTools' => '<button class="btn btn-success btn-xs create_button" ><i class="fa fa-plus-circle"></i> Add</button>',
             ]) ?>
+            <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
             <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
                 'title' => '1',
                 'text' => 'Mensagens',
-                'icon' => 'fas fa-',
+                'icon' => 'fas fa-envelope',
                 'theme' => 'success'
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <?= \hail812\adminlte\widgets\SmallBox::widget([
+            <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
                 'title' => '44',
                 'text' => 'User Registrations',
                 'icon' => 'fas fa-user-plus',
                 'theme' => 'gradient-success'
             ]) ?>
+            <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
     </div>
 </div>
