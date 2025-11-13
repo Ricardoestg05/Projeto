@@ -82,7 +82,7 @@ AppAsset::register($this);
     ?>
 </header>
 
-<main role="main" class="flex-shrink-0">
+<main role="main" class="flex-shrink-0 mt-5 pt-5">
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -93,7 +93,7 @@ AppAsset::register($this);
 </main>
 
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-secondary px-5 mt-5">
+<div class="container-fluid bg-dark text-secondary px-5 mt-5 sticky-footer">
     <div class="row gx-5">
         <div class="col-lg-8 col-md-6">
             <div class="row gx-5">
@@ -157,11 +157,11 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
-<div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
+<div class="container-fluid py-4 py-lg-0 px-5 sticky-footer" style="background: #111111;">
     <div class="row gx-5">
         <div class="col-lg-8">
             <div class="py-lg-4 text-center">
-                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Athlos Gym</a>. All Rights Reserved.</p>
             </div>
         </div>
         <div class="col-lg-4">

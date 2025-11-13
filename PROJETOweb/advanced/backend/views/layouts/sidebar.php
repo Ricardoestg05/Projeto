@@ -64,6 +64,11 @@
                             ['label' => 'Clientes associados', 'iconStyle' => 'far', 'icon' => 'circle'],
                         ],
                     ],
+                    [
+                        'label' => 'Gii',
+                        'icon' => 'code',
+                        'url' => 'index.php/gii',
+                    ],
                     /*
                     ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
