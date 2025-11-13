@@ -18,8 +18,9 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="<?= Yii::getAlias('@web/favicon.ico') ?>">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= (Yii::$app->name ? '  ' . Yii::$app->name : '') ?></title>
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100">
@@ -161,12 +162,12 @@ AppAsset::register($this);
     <div class="row gx-5">
         <div class="col-lg-8">
             <div class="py-lg-4 text-center">
-                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Athlos</a>. All Rights Reserved.</p>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="py-lg-4 text-center credit">
-                <p class="text-light mb-0">Designed by <a class="text-light fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="text-light mb-0">Designed by <a class="text-light fw-bold" href="">Athlos</a></p>
             </div>
         </div>
     </div>

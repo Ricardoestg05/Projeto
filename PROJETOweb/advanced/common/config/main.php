@@ -1,5 +1,6 @@
 <?php
 return [
+    'name' => 'Athlos',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

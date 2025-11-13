@@ -11,31 +11,99 @@ class RbacController extends Controller
     {
         $auth = Yii::$app->authManager;
 
-        // adciona a permissão "createPost"
-        $createPost = $auth->createPermission('createPost');
-        $createPost->description = 'Create a post';
-        $auth->add($createPost);
+        // LIMPA todas as roles anteriores
+        $auth->removeAll();
 
-        // adciona a permissão  "updatePost"
-        $updatePost = $auth->createPermission('updatePost');
-        $updatePost->description = 'Update post';
-        $auth->add($updatePost);
+         // PERMISSÕES
 
-        // adciona a role "author" e da a esta role a permissão "createPost"
-        $author = $auth->createRole('author');
-        $auth->add($author);
-        $auth->addChild($author, $createPost);
+        // Backoffice
+        $manageGyms = $auth->createPermission('manageGyms');
+        $manageGyms->description = 'Gerir diferentes ginásios';
+        $auth->add($manageGyms);
 
-        // adciona a role "admin" e da a esta role a permissão "updatePost"
-        // bem como as permissões da role "author"
-        $admin = $auth->createRole('admin');
-        $auth->add($admin);
-        $auth->addChild($admin, $updatePost);
-        $auth->addChild($admin, $author);
+        $manageStaff = $auth->createPermission('manageStaff');
+        $manageStaff->description = 'Gerir o staff geral';
+        $auth->add($manageStaff);
 
-        // Atribui roles para usuários. 1 and 2 são IDs retornados por IdentityInterface::getId()
-        // normalmente implementado no seu model User.
-        $auth->assign($author, 2);
-        $auth->assign($admin, 1);
+        // Personal Trainer
+        $manageExercises = $auth->createPermission('manageExercises');
+        $manageExercises->description = 'Gerir exercícios';
+        $auth->add($manageExercises);
+
+        $manageGroupClasses = $auth->createPermission('manageGroupClasses');
+        $manageGroupClasses->description = 'Gerir aulas de grupo';
+        $auth->add($manageGroupClasses);
+
+        $manageTrainingPlans = $auth->createPermission('manageTrainingPlans');
+        $manageTrainingPlans->description = 'Gerir planos de treino dos clientes';
+        $auth->add($manageTrainingPlans);
+
+        $managePhysicalEvaluations = $auth->createPermission('managePhysicalEvaluations');
+        $managePhysicalEvaluations->description = 'Gerir avaliações físicas dos clientes';
+        $auth->add($managePhysicalEvaluations);
+
+        // Nutricionista
+        $manageDietPlans = $auth->createPermission('manageDietPlans');
+        $manageDietPlans->description = 'Gerir planos alimentares dos clientes';
+        $auth->add($manageDietPlans);
+
+        $accessPhysicalEvaluations = $auth->createPermission('accessPhysicalEvaluations');
+        $accessPhysicalEvaluations->description = 'Aceder às avaliações físicas dos clientes';
+        $auth->add($accessPhysicalEvaluations);
+
+        // Cliente
+        $viewTrainingPlans = $auth->createPermission('viewTrainingPlans');
+        $viewTrainingPlans->description = 'Acesso read-only aos planos de treino';
+        $auth->add($viewTrainingPlans);
+
+        $viewDietPlans = $auth->createPermission('viewDietPlans');
+        $viewDietPlans->description = 'Acesso read-only aos planos alimentares';
+        $auth->add($viewDietPlans);
+
+        $bookGroupClasses = $auth->createPermission('bookGroupClasses');
+        $bookGroupClasses->description = 'Fazer reservas para aulas de grupo';
+        $auth->add($bookGroupClasses);
+
+        $sendInAppMessages = $auth->createPermission('sendInAppMessages');
+        $sendInAppMessages->description = 'Enviar mensagens In-App para PTs ou nutricionistas';
+        $auth->add($sendInAppMessages);
+
+        $viewInvoices = $auth->createPermission('viewInvoices');
+        $viewInvoices->description = 'Consultar faturas';
+        $auth->add($viewInvoices);
+
+        // ROLES
+
+        // SYS ADMIN
+        $sysAdmin = $auth->createRole('sys_admin');
+        $auth->add($sysAdmin);
+        $auth->addChild($sysAdmin, $manageGyms);
+        $auth->addChild($sysAdmin, $manageStaff);
+
+        // PERSONAL TRAINER
+        $personalTrainer = $auth->createRole('personal_trainer');
+        $auth->add($personalTrainer);
+        $auth->addChild($personalTrainer, $manageExercises);
+        $auth->addChild($personalTrainer, $manageGroupClasses);
+        $auth->addChild($personalTrainer, $manageTrainingPlans);
+        $auth->addChild($personalTrainer, $managePhysicalEvaluations);
+
+        // NUTRICIONISTA
+        $nutricionista = $auth->createRole('nutricionista');
+        $auth->add($nutricionista);
+        $auth->addChild($nutricionista, $manageDietPlans);
+        $auth->addChild($nutricionista, $accessPhysicalEvaluations);
+
+        // CLIENTE
+        $cliente = $auth->createRole('cliente');
+        $auth->add($cliente);
+        $auth->addChild($cliente, $viewTrainingPlans);
+        $auth->addChild($cliente, $viewDietPlans);
+        $auth->addChild($cliente, $bookGroupClasses);
+        $auth->addChild($cliente, $sendInAppMessages);
+        $auth->addChild($cliente, $viewInvoices);
+
+        $auth->assign($sysAdmin, 1);
+
     }
 }
