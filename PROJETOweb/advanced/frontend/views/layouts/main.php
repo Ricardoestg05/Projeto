@@ -18,7 +18,7 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="<?= Yii::getAlias('@web/favicon.ico') ?>">
+    <link rel="icon" type="image/png" href="<?= Yii::getAlias('@web/athlos.png') ?>">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= (Yii::$app->name ? '  ' . Yii::$app->name : '') ?></title>
     <?php $this->head() ?>
@@ -84,7 +84,7 @@ AppAsset::register($this);
 </header>
 
 <main role="main" class="flex-shrink-0 mt-5 pt-5">
-    <div class="container">
+    <div class="">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -99,14 +99,14 @@ AppAsset::register($this);
         <div class="col-lg-8 col-md-6">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                    <h4 class="text-uppercase text-light mb-4">Encontra-nos</h4>
                     <div class="d-flex mb-2">
                         <i class="bi bi-geo-alt text-primary me-2"></i>
                         <p class="mb-0">123 Street, New York, USA</p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-envelope-open text-primary me-2"></i>
-                        <p class="mb-0">info@example.com</p>
+                        <p class="mb-0">suporte@athlosgym.com</p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-telephone text-primary me-2"></i>
