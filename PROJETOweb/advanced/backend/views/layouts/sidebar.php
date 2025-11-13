@@ -1,6 +1,9 @@
+<?php
+use yii\helpers\Html;
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="../../frontend/web" class="brand-link">
         <img src="./img/logoAthlos.png" alt="AdminLTE Logo" class="brand-image img-circle" style="max-width: 35px;">
         <span class="brand-text font-weight-light">Athlos Gym</span>
     </a>
@@ -69,7 +72,15 @@
                         'icon' => 'code',
                         'url' => 'index.php/gii',
                     ],
+                    [
+                        'label' => 'Logout',
+                        'icon' => 'sign-out-alt',
+                        'url' => ['/site/logout'],
+                        'linkOptions' => ['data-method' => 'post'],
+                    ],
+
                     /*
+                     * <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link']) ?>
                     ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],

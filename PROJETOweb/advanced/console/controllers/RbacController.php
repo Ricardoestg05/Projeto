@@ -1,6 +1,6 @@
 <?php
 
-namespace controllers;
+namespace console\controllers;
 
 use Yii;
 use yii\console\Controller;
@@ -74,11 +74,7 @@ class RbacController extends Controller
 
         // ROLES
 
-        // SYS ADMIN
-        $sysAdmin = $auth->createRole('sys_admin');
-        $auth->add($sysAdmin);
-        $auth->addChild($sysAdmin, $manageGyms);
-        $auth->addChild($sysAdmin, $manageStaff);
+
 
         // PERSONAL TRAINER
         $personalTrainer = $auth->createRole('personal_trainer');
@@ -103,7 +99,17 @@ class RbacController extends Controller
         $auth->addChild($cliente, $sendInAppMessages);
         $auth->addChild($cliente, $viewInvoices);
 
+        // SYS ADMIN
+        $sysAdmin = $auth->createRole('sys_admin');
+        $auth->add($sysAdmin);
+        $auth->addChild($sysAdmin, $manageGyms);
+        $auth->addChild($sysAdmin, $manageStaff);
+        $auth->addChild($sysAdmin, $personalTrainer);
+        $auth->addChild($sysAdmin, $nutricionista);
+        $auth->addChild($sysAdmin, $cliente);
+
         $auth->assign($sysAdmin, 1);
+        $auth->assign($cliente, 2);
 
     }
 }

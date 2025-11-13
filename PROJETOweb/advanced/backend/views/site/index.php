@@ -106,7 +106,8 @@ use yii\helpers\Url;
                 'title' => '1500',
                 'text' => 'Sócios Ativos',
                 'icon' => 'fas fa-users',
-                'linkUrl' => ['/gii']
+                'linkUrl' => ['#'],
+                'theme' => 'gradient-lightblue',
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
@@ -115,7 +116,7 @@ use yii\helpers\Url;
                 'title' => '1',
                 'text' => 'Mensagens',
                 'icon' => 'fas fa-envelope',
-                'theme' => 'success'
+                'theme' => 'gradient-green',
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
@@ -124,7 +125,7 @@ use yii\helpers\Url;
                 'title' => '44',
                 'text' => 'User Registrations',
                 'icon' => 'fas fa-user-plus',
-                'theme' => 'gradient-success'
+                'theme' => 'yellow'
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>

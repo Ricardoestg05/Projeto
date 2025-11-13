@@ -182,7 +182,7 @@ use yii\helpers\Html;
         </li>
         -->
         <li class="nav-item">
-            <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link']) ?>
+
         </li>
         <li class="ms-auto">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -195,7 +195,7 @@ use yii\helpers\Html;
                 <i class="fas fa-th-large"></i>
             </a>
         </li>
-        
+
     </ul>
 </nav>
 <!-- /.navbar -->
