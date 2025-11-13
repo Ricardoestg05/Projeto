@@ -106,7 +106,7 @@ use yii\helpers\Url;
                 'title' => '1500',
                 'text' => 'Sócios Ativos',
                 'icon' => 'fas fa-users',
-                'boxTools' => '<button class="btn btn-success btn-xs create_button" ><i class="fa fa-plus-circle"></i> Add</button>',
+                'linkUrl' => ['/gii']
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>
