@@ -7,8 +7,8 @@ use yii\helpers\Html;
         <div class="card-body login-card-body">
 
             <div class="text-center mb-4">
-                <img src="./img/logoAthlos.png" alt="Logotipo" style="max-width: 120px;">
-                <h5 class="mt-2 fw-bold">Athlos Gym</h5>
+                <img src="./img/logo_athlos.png" alt="Logotipo" style="max-width: 120px;">
+                <h5 class="mt-2 fw-bold">Login</h5>
             </div>
 
             <p class="login-box-msg">Faça login para começar a sua sessão:</p>
@@ -33,10 +33,11 @@ use yii\helpers\Html;
                 ->label(false)
                 ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
 
+
             <div class="row">
 
                 <div class="col">
-                    <?= Html::submitButton('Sign In', ['class' => 'btn btn-primary w-100']) ?>
+                    <?= Html::submitButton('Log In', ['class' => 'btn btn-primary w-100']) ?>
                 </div>
             </div>
 

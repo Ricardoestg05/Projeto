@@ -123,9 +123,30 @@ use yii\helpers\Url;
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
             <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
                 'title' => '44',
-                'text' => 'User Registrations',
+                'text' => 'Novas inscrições',
                 'icon' => 'fas fa-user-plus',
                 'theme' => 'yellow'
+            ]) ?>
+            <?php \hail812\adminlte\widgets\SmallBox::end() ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+            <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
+                'title' => '1500',
+                'text' => 'Check-ins Hoje',
+                'icon' => 'fas fa-users',
+                'linkUrl' => ['#'],
+                'theme' => 'gradient-purple',
+            ]) ?>
+            <?php \hail812\adminlte\widgets\SmallBox::end() ?>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+            <?php $smallBox = \hail812\adminlte\widgets\SmallBox::begin([
+                'title' => '1',
+                'text' => 'Aulas agendadas',
+                'icon' => 'fas fa-running',
+                'theme' => 'gradient-gray',
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>
         </div>

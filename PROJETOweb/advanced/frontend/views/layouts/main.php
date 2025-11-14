@@ -58,8 +58,8 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Sobre', 'url' => ['/site/about']],
+        ['label' => 'Contacto', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -102,7 +102,7 @@ AppAsset::register($this);
                     <h4 class="text-uppercase text-light mb-4">Encontra-nos</h4>
                     <div class="d-flex mb-2">
                         <i class="bi bi-geo-alt text-primary me-2"></i>
-                        <p class="mb-0">123 Street, New York, USA</p>
+                        <p class="mb-0">1234-567, Avenida Alberto Cunha nº4</p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-envelope-open text-primary me-2"></i>
@@ -110,7 +110,7 @@ AppAsset::register($this);
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-telephone text-primary me-2"></i>
-                        <p class="mb-0">+012 345 67890</p>
+                        <p class="mb-0">+351 214 537 378</p>
                     </div>
                     <div class="d-flex mt-4">
                         <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -123,22 +123,20 @@ AppAsset::register($this);
                     <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Sobre nós</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Horários</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Os nossos treinadores</a>
+                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contacta-nos</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                     <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Sobre nós</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Horários</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Os nossos treinadores</a>
+                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contacta-nos</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +144,7 @@ AppAsset::register($this);
         <div class="col-lg-4 col-md-6">
             <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
                 <h4 class="text-uppercase text-white mb-4">Newsletter</h4>
-                <h6 class="text-uppercase text-white">Subscribe Our Newsletter</h6>
+                <h6 class="text-uppercase text-white">Subscreve a nossa Newsletter</h6>
                 <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
                 <form action="">
                     <div class="input-group">

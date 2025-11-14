@@ -70,17 +70,17 @@ use yii\helpers\Html;
                     [
                         'label' => 'Gii',
                         'icon' => 'code',
-                        'url' => 'index.php/gii',
+                        'url' => 'index.php?r=gii',
                     ],
                     [
                         'label' => 'Logout',
-                        'icon' => 'sign-out-alt',
+                        //'icon' => 'sign-out-alt',
                         'url' => ['/site/logout'],
-                        'linkOptions' => ['data-method' => 'post'],
+                        'template' => '<a class="d-inline-flex" href="{url}" data-method="post"><i class="fas fa-sign-out-alt"></i>{label}</a>',
                     ],
 
                     /*
-                     * <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link']) ?>
+                     *
                     ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],

@@ -15,13 +15,13 @@ $this->title = 'Athlos';
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                <img class="w-100" src="./img/carousel-1.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase">Best Gym Center</h5>
-                        <h1 class="display-2 text-white text-uppercase mb-md-4">Build Your Body Strong With Gymster</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                        <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                        <h5 class="text-white text-uppercase">Athlos</h5>
+                        <h1 class="display-2 text-white text-uppercase mb-md-4">Um corpo forte não é feito com conforto</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Junta-te a nós</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Entrar em contacto</a>
                     </div>
                 </div>
             </div>
@@ -29,10 +29,10 @@ $this->title = 'Athlos';
                 <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase">Best Gym Center</h5>
-                        <h1 class="display-2 text-white text-uppercase mb-md-4">Grow Your Strength With Our Trainers</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                        <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                        <h5 class="text-white text-uppercase">Athlos</h5>
+                        <h1 class="display-2 text-white text-uppercase mb-md-4">Torna-te na tua melhor versão com os nossos treinadores!</h1>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Junta-te a nós</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Entrar em contacto</a>
                     </div>
                 </div>
             </div>
@@ -40,12 +40,12 @@ $this->title = 'Athlos';
         <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Próximo</span>
         </button>
     </div>
 </div>
@@ -62,18 +62,18 @@ $this->title = 'Athlos';
         </div>
         <div class="col-lg-7">
             <div class="mb-4">
-                <h5 class="text-primary text-uppercase">About Us</h5>
-                <h1 class="display-3 text-uppercase mb-0">Welcome to Gymster</h1>
+                <h5 class="text-primary text-uppercase">Sobre nós</h5>
+                <h1 class="display-3 text-uppercase mb-0">Bem-vindo ao Athlos!</h1>
             </div>
             <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
             <p class="mb-4">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
             <div class="rounded bg-dark p-5">
                 <ul class="nav nav-pills justify-content-between mb-3">
                     <li class="nav-item w-50">
-                        <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">About Us</a>
+                        <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">Sobre nós</a>
                     </li>
                     <li class="nav-item w-50">
-                        <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">Why Choose Us</a>
+                        <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">Porquê nós?</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -130,31 +130,31 @@ $this->title = 'Athlos';
 <!-- Class Timetable Start -->
 <div class="container-fluid p-5">
     <div class="mb-5 text-center">
-        <h5 class="text-primary text-uppercase">Class Schedule</h5>
-        <h1 class="display-3 text-uppercase mb-0">Working Hours</h1>
+        <h5 class="text-primary text-uppercase">Planos de aulas</h5>
+        <h1 class="display-3 text-uppercase mb-0">Horários das aulas</h1>
     </div>
     <div class="tab-class text-center">
         <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white active" data-bs-toggle="pill" href="#tab-1">Monday</a>
+                <a class="nav-link rounded-pill text-white active" data-bs-toggle="pill" href="#tab-1">Segunda-feira</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-2">Tuesday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-2">Terça-feira</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-3">Wednesday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-3">Quarta-feira</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-4">Thursday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-4">Quinta-feira</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-5">Friday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-5">Sexta-feira</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-6">Saturday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-6">Sábado</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-7">Sunday</a>
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" href="#tab-7">Domingo</a>
             </li>
         </ul>
         <div class="tab-content">
