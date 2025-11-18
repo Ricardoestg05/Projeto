@@ -14,7 +14,12 @@ class RbacController extends Controller
         // LIMPA todas as roles anteriores
         $auth->removeAll();
 
-         // PERMISSÕES
+         // PERMISSÕES«
+
+        // PERMISSÃO DE ACESSO AO BACKEND
+        $accessBackend = $auth->createPermission('accessBackend');
+        $accessBackend->description = 'Acesso às áreas de gestão (Backend)';
+        $auth->add($accessBackend);
 
         // Backoffice
         $manageGyms = $auth->createPermission('manageGyms');
@@ -83,12 +88,14 @@ class RbacController extends Controller
         $auth->addChild($personalTrainer, $manageGroupClasses);
         $auth->addChild($personalTrainer, $manageTrainingPlans);
         $auth->addChild($personalTrainer, $managePhysicalEvaluations);
+        $auth->addChild($personalTrainer, $accessBackend);
 
         // NUTRICIONISTA
         $nutricionista = $auth->createRole('nutricionista');
         $auth->add($nutricionista);
         $auth->addChild($nutricionista, $manageDietPlans);
         $auth->addChild($nutricionista, $accessPhysicalEvaluations);
+        $auth->addChild($nutricionista, $accessBackend);
 
         // CLIENTE
         $cliente = $auth->createRole('cliente');
@@ -107,9 +114,10 @@ class RbacController extends Controller
         $auth->addChild($sysAdmin, $personalTrainer);
         $auth->addChild($sysAdmin, $nutricionista);
         $auth->addChild($sysAdmin, $cliente);
+        $auth->addChild($sysAdmin, $accessBackend);
 
         $auth->assign($sysAdmin, 1);
-        $auth->assign($cliente, 2);
+        $auth->assign($cliente, 3);
 
     }
 }

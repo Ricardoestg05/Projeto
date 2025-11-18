@@ -9,6 +9,8 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 
+
+
 /**
  * Site controller
  */
@@ -22,24 +24,34 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
+                
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error'], // Permitir que todos acedam ao login e erro
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        // Regra 2: Permitir acesso a 'logout' para TODOS os utilizadores AUTENTICADOS
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'allow' => true,
+
+                        'roles' => ['accessBackend'],
+                    ],
                 ],
+                'denyCallback' => function ($rule, $action) {
+                    // Redirecionar para o login do backend se não estiver autenticado
+                    if (\Yii::$app->user->isGuest) {
+                        return $action->controller->redirect(['site/login']);
+                    }
+                    // Mostrar erro 403 se estiver autenticado mas não tiver a permissão
+                    throw new \yii\web\ForbiddenHttpException('Não tem permissão para aceder à administração.');
+                }
             ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
+
         ];
     }
 
