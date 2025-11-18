@@ -1,11 +1,12 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../../frontend/web" class="brand-link">
         <img src="./img/logoAthlos.png" alt="AdminLTE Logo" class="brand-image img-circle" style="max-width: 35px;">
-        <span class="brand-text font-weight-light">Athlos Gym</span>
+        <span class="brand-text font-weight-light">Athlos Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -16,7 +17,9 @@ use yii\helpers\Html;
                 <img src="./img/user-img.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Admin</a>
+                <?= Yii::$app->user->isGuest
+                    ? Html::a('Entrar', ['site/login'], ['class' => 'd-block'])
+                    : Html::a(Html::encode(Yii::$app->user->identity->username), Url::to(['site/profile']), ['class' => 'd-block']) ?>
             </div>
         </div>
 
@@ -70,13 +73,13 @@ use yii\helpers\Html;
                     [
                         'label' => 'Gii',
                         'icon' => 'code',
-                        'url' => 'index.php?r=gii',
+                        'url' => 'index.php/gii',
                     ],
                     [
                         'label' => 'Logout',
-                        //'icon' => 'sign-out-alt',
+                        'icon' => 'sign-out-alt',
                         'url' => ['/site/logout'],
-                        'template' => '<a class="d-inline-flex" href="{url}" data-method="post"><i class="fas fa-sign-out-alt"></i>{label}</a>',
+                        'template' => '<a class="d-inline-flex p-2 m-2" href="{url}" data-method="post"><i class="fas fa-sign-out-alt"></i>{label}</a>',
                     ],
 
                     /*
