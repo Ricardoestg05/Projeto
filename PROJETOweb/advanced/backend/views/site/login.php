@@ -7,7 +7,7 @@ use yii\helpers\Html;
         <div class="card-body login-card-body">
 
             <div class="text-center mb-4">
-                <img src="./img/logo_athlos.png" alt="Logotipo" style="max-width: 120px;">
+                <img src="../../web/img/logo_athlos.png" alt="Logotipo" style="max-width: 120px;">
                 <h5 class="mt-2 fw-bold">Login</h5>
             </div>
 

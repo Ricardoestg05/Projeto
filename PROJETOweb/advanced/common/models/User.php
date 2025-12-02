@@ -38,6 +38,7 @@ class User extends ActiveRecord implements IdentityInterface
         return '{{%user}}';
     }
 
+
     /**
      * {@inheritdoc}
      */
@@ -57,6 +58,32 @@ class User extends ActiveRecord implements IdentityInterface
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => 'Username',
+            'auth_key' => 'Auth Key',
+            'password_hash' => 'Password Hash',
+            'password_reset_token' => 'Password Reset Token',
+            'email' => 'Email',
+            'status' => 'Status',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
+            'verification_token' => 'Verification Token',
+        ];
+    }
+
+    /**
+     * Gets query for [[Profiles]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfiles()
+    {
+        return $this->hasMany(Profile::class, ['user_id' => 'id']);
     }
 
     /**

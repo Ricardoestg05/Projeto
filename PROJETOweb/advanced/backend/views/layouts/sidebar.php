@@ -66,7 +66,8 @@ use yii\helpers\Url;
                         'label' => 'Utilizadores',
                         'icon' => 'users',
                         'items' => [
-                            ['label' => 'Todos os utilizadores', 'iconStyle' => 'far', 'icon' => 'circle'],
+                            ['label' => 'Todos os utilizadores', 'iconStyle' => 'far', 'icon' => 'circle',
+                                'url' => ['../web/user/index'],],
                             ['label' => 'Clientes associados', 'iconStyle' => 'far', 'icon' => 'circle'],
                         ],
                     ],

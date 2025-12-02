@@ -106,7 +106,7 @@ use yii\helpers\Url;
                 'title' => '1500',
                 'text' => 'Sócios Ativos',
                 'icon' => 'fas fa-users',
-                'linkUrl' => ['#'],
+                'linkUrl' => ['../views/user/index'],
                 'theme' => 'gradient-lightblue',
             ]) ?>
             <?php \hail812\adminlte\widgets\SmallBox::end() ?>

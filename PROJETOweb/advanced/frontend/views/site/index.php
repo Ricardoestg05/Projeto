@@ -15,7 +15,7 @@ $this->title = 'Athlos';
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="./img/carousel-1.jpg" alt="Image">
+                <img class="w-100" src="<?= Yii::getAlias('@web').'./img/carousel-1.jpg'?>" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase">Athlos</h5>
@@ -26,7 +26,7 @@ $this->title = 'Athlos';
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                <img class="w-100" src="<?= Yii::getAlias('@web').'/img/carousel-2.jpg'?>" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase">Athlos</h5>
@@ -57,7 +57,7 @@ $this->title = 'Athlos';
     <div class="row gx-5">
         <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
             <div class="position-relative h-100">
-                <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100 rounded" src="<?= Yii::getAlias('@web').'/img/about.jpg'?>" style="object-fit: cover;">
             </div>
         </div>
         <div class="col-lg-7">
@@ -646,7 +646,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4 col-md-6">
             <div class="team-item position-relative">
                 <div class="position-relative overflow-hidden rounded">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?= Yii::getAlias('@web').'/img/team-1.jpg'?>" alt="">
                     <div class="team-overlay">
                         <div class="d-flex align-items-center justify-content-start">
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -664,7 +664,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4 col-md-6">
             <div class="team-item position-relative">
                 <div class="position-relative overflow-hidden rounded">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?= Yii::getAlias('@web').'/img/team-2.jpg'?>" alt="">
                     <div class="team-overlay">
                         <div class="d-flex align-items-center justify-content-start">
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -682,7 +682,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4 col-md-6">
             <div class="team-item position-relative">
                 <div class="position-relative overflow-hidden rounded">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?= Yii::getAlias('@web').'/img/team-3.jpg'?>" alt="">
                     <div class="team-overlay">
                         <div class="d-flex align-items-center justify-content-start">
                             <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -707,7 +707,7 @@ $this->title = 'Athlos';
     <div class="row g-0">
         <div class="col-lg-6" style="min-height: 500px;">
             <div class="position-relative h-100">
-                <img class="position-absolute w-100 h-100" src="img/testimonial.jpg" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="<?= Yii::getAlias('@web').'/img/testimonial.jpg'?>" style="object-fit: cover;">
             </div>
         </div>
         <div class="col-lg-6 bg-dark p-5">
@@ -719,7 +719,7 @@ $this->title = 'Athlos';
                 <div class="testimonial-item">
                     <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid rounded-circle" src="<?= Yii::getAlias('@web').'/img/testimonial-1.jpg'?>" alt="">
                         <div class="ps-4">
                             <h5 class="text-uppercase text-light">Client Name</h5>
                             <span class="text-uppercase text-secondary">Profession</span>
@@ -729,7 +729,7 @@ $this->title = 'Athlos';
                 <div class="testimonial-item">
                     <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid rounded-circle" src="<?= Yii::getAlias('@web').'/img/testimonial-2.jpg'?>" alt="">
                         <div class="ps-4">
                             <h5 class="text-uppercase text-light">Client Name</h5>
                             <span class="text-uppercase text-secondary">Profession</span>
@@ -753,7 +753,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4">
             <div class="blog-item">
                 <div class="position-relative overflow-hidden rounded-top">
-                    <img class="img-fluid" src="img/blog-1.jpg" alt="">
+                    <img class="img-fluid" src="<?= Yii::getAlias('@web').'/img/blog-1.jpg'?>" alt="">
                 </div>
                 <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
                     <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
@@ -768,7 +768,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4">
             <div class="blog-item">
                 <div class="position-relative overflow-hidden rounded-top">
-                    <img class="img-fluid" src="img/blog-2.jpg" alt="">
+                    <img class="img-fluid" src="<?= Yii::getAlias('@web').'/img/blog-2.jpg'?>" alt="">
                 </div>
                 <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
                     <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
@@ -783,7 +783,7 @@ $this->title = 'Athlos';
         <div class="col-lg-4">
             <div class="blog-item">
                 <div class="position-relative overflow-hidden rounded-top">
-                    <img class="img-fluid" src="img/blog-3.jpg" alt="">
+                    <img class="img-fluid" src="<?= Yii::getAlias('@web').'/img/blog-3.jpg'?>" alt="">
                 </div>
                 <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
                     <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
