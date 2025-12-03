@@ -15,6 +15,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\User;
 
 /**
  * Site controller
@@ -154,7 +155,10 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+
+
             Yii::$app->session->setFlash('success', 'Obrigado pelo teu registo!');
             return $this->goHome();
         }

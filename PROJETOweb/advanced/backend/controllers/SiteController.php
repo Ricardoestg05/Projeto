@@ -24,35 +24,32 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'], // Permitir que todos acedam ao login e erro
-                        'allow' => true,
-                    ],
-                    [
-                        // Regra 2: Permitir acesso a 'logout' para TODOS os utilizadores AUTENTICADOS
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
+                        'actions' => ['login', 'error'],
+                        'allow' => true, // login permitido a todos
                     ],
                     [
                         'allow' => true,
-
-                        'roles' => ['accessBackend'],
+                        'roles' => ['accessBackend'], // só estes entram no backend
                     ],
                 ],
                 'denyCallback' => function ($rule, $action) {
-                    // Redirecionar para o login do backend se não estiver autenticado
-                    if (\Yii::$app->user->isGuest) {
+
+                    // ❗ Se não está autenticado → manda para login
+                    if (Yii::$app->user->isGuest) {
                         return $action->controller->redirect(['site/login']);
                     }
-                    // Mostrar erro 403 se estiver autenticado mas não tiver a permissão
-                    throw new \yii\web\ForbiddenHttpException('Não tem permissão para aceder à administração.');
-                }
-            ],
 
+                    // ❗ Se está autenticado mas NÃO TEM PERMISSÃO
+                    //   → FAZ LOGOUT e manda para fora
+                    Yii::$app->user->logout();
+
+                    return Yii::$app->response->redirect(['/site/login']);
+                },
+            ],
         ];
+
     }
 
     /**
